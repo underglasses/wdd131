@@ -1,0 +1,114 @@
+/* styles.css */
+
+:root {
+    --primary-color: rgb(0, 56, 102);
+    --secondary-color: #eee;
+    --third-color: rgb(56, 57, 58);
+    --primary-font-head-footer: comicsansms, sans-serif;
+    --secondary-font-titles: verdana, sans-serif;
+    --tertiary-font-paragraph: tahoma, sans-serif;
+    --font-size: 16px;
+    --line-height: 1.5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*Top Styling*/
+header {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 5px 0;
+    text-align: center;
+    font-family: var(--primary-font-head-footer);
+}
+
+nav {
+    background-color: var(--third-color);
+    justify-content: space-around;
+    display: flex;
+}
+
+nav a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-family: var(--primary-font-head-footer);
+    font-size: var(--font-size);
+    font-weight: bold;
+    padding: 8px 16px;
+}
+
+/* Body Styling*/
+
+main {
+    padding: 20px;
+    font-family: var(--tertiary-font-paragraph);
+    font-size: var(--font-size);
+    line-height: var(--line-height);
+    min-height: 80vh;
+    display: inline-flex;
+}
+
+.profile-card {
+    margin: 1rem;
+    border: 1px solid var(--third-color);
+    padding: 10px;
+    font-size: .9rem;
+    border-radius: 10px;
+    color: var(--third-color);
+    background-color: var(--secondary-color);
+}
+
+section p {
+    text-align: justify;
+    margin-top: 1rem;
+    padding: 1rem;
+}
+
+h3 {
+    margin: -10px -10px 10px -10px;
+    font-family: var(--secondary-font-titles);
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+    border-radius: 10px 10px 0 0;
+    padding: 10px;
+    text-align: center;
+}
+    
+figure img {
+    width: 100px;
+    height: auto;
+    display: block;
+    margin: 10px ;
+}
+
+.resources-card {
+    margin: 1rem;
+    border: 1px solid var(--third-color);
+    padding: 10px;
+    font-size: .9rem;
+    border-radius: 10px;
+    color: var(--third-color);
+    background-color: var(--secondary-color);
+}
+
+ul {
+    text-align: justify;
+    padding: 5rem 0 1rem 20px;
+}
+
+
+/* Footer Styling */
+footer{
+    padding: 1rem;
+    background-color: var(--primary-color);
+    text-align: center;
+    font-family: var(--primary-font-head-footer);
+    color: var(--secondary-color);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
