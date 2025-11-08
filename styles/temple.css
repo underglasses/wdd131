@@ -1,0 +1,172 @@
+/* styles.css */
+
+:root {
+    --primary-color: rgb(117, 0, 146);
+    --secondary-color: #eee;
+    --third-color: rgb(56, 57, 58);
+    --primary-font-head-footer: "Comic Sans MS", sans-serif;
+    --secondary-font-titles: "Story Script", sans-serif;
+    --tertiary-font-paragraph: tahoma, sans-serif;
+    --font-size: 16px;
+    --line-height: 1.5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*Top Styling*/
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1rem 2rem;
+  position: relative;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.main-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.main-nav a:hover {
+  color: #f1c40f;
+}
+
+/* ===== Hamburger Button ===== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  background: white;
+  height: 3px;
+  width: 100%;
+  border-radius: 2px;
+  margin-bottom: 4px;
+  transition: 0.3s;
+}
+
+/* ===== Mobile Menu ===== */
+@media (max-width: 768px) {
+  .main-nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: var(--primary-color);
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    width: 200px;
+    border-radius: 0 0 5px 5px;
+    padding: 1rem 0;
+  }
+
+  .main-nav ul.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+/*MAIN STYLING*/
+/* MAIN STYLING */
+main h1 {
+  font-family: var(--secondary-font-titles);
+  font-size: 2rem;
+  margin: 5px 0 0 0;
+  text-align: center;
+}
+
+.options {
+  text-align: center;
+  padding: 20px;
+}
+
+.profile-title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 20px;
+  justify-items: center;
+  align-items: center;
+}
+
+/* Figures */
+figure {
+  margin: 0;
+  text-align: center;
+}
+
+figure img {
+  width: 175px;
+  height: 175px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+figcaption {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* ===== Responsive layout for mobile ===== */
+@media (max-width: 768px) {
+  .options-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 15px;
+  }
+
+  figure img {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+
+/* Footer Styling */
+footer{
+    padding: 1rem;
+    background-color: var(--primary-color);
+    text-align: center;
+    font-family: var(--primary-font-head-footer);
+    color: var(--secondary-color);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.javascript {
+    color: yellow;
+}
