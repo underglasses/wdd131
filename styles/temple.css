@@ -91,7 +91,6 @@ header h1 {
   }
 }
 
-/*MAIN STYLING*/
 /* MAIN STYLING */
 main h1 {
   font-family: var(--secondary-font-titles);
@@ -141,7 +140,7 @@ figcaption {
 }
 
 /* ===== Responsive layout for mobile ===== */
-@media (max-width: 768px) {
+@media (max-width: 640px) {
   .options-grid {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
