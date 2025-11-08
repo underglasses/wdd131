@@ -1,9 +1,5 @@
- // Get the current date
-  const today = new Date();
+// Dynamically insert the current year
+  document.getElementById("year").textContent = new Date().getFullYear();
 
-  // Format the date 
-  const options = { year: 'numeric', month: 'long', day: 'numeric' };
-  const formattedDate = today.toLocaleDateString('en-US', options);
-
-  // Insert into the footer span
-  document.getElementById('date').textContent = formattedDate;
+  // Dynamically insert the document's last modified date/time
+  document.getElementById("date").textContent = document.lastModified;
