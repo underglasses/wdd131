@@ -69,7 +69,7 @@ header h1 {
 }
 
 /* ===== Mobile Menu ===== */
-@media (max-width: 768px) {
+@media (max-width: 500x) {
   .main-nav ul {
     display: none;
     flex-direction: column;
@@ -140,7 +140,7 @@ figcaption {
 }
 
 /* ===== Responsive layout for mobile ===== */
-@media (max-width: 640px) {
+@media (max-width: 500px) {
   .options-grid {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
