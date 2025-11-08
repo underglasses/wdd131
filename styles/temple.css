@@ -68,8 +68,9 @@ header h1 {
   transition: 0.3s;
 }
 
+
 /* ===== Mobile Menu ===== */
-@media (max-width: 500x) {
+@media (max-width: 500px) {
   .main-nav ul {
     display: none;
     flex-direction: column;
