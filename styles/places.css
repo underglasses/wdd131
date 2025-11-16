@@ -1,7 +1,6 @@
 /* styles.css */
-
 :root {
-    --primary-color: rgb(117, 0, 146);
+    --primary-color: rgb(19, 0, 124);
     --secondary-color: #eee;
     --third-color: rgb(56, 57, 58);
     --primary-font-head-footer: "Comic Sans MS", sans-serif;
@@ -17,6 +16,48 @@
   box-sizing: border-box;
 }
 
+header {
+padding: 1rem;
+    background-color: var(--primary-color);
+    text-align: center;
+    font-family: var(--primary-font-head-footer);
+    color: var(--secondary-color);
+    width: 100%;
+    position: relative;
+}
+
+/**/
+h2, ul{
+    text-align: center;
+}
+
+.hero-pc {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+
+.hero-mobile {
+    display: none;
+}
+
+span {
+    font-weight: bold;
+}
+
+.icon {
+    width: 2%;
+    height: 2%;
+}
+
+@media only screen and (max-width: 600px) {
+  .hero-mobile {
+    width: 25%;
+    height: 25%;
+    align-items: center;
+}
+
+}
 
 /* Footer Styling */
 footer{
