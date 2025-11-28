@@ -1,32 +1,82 @@
-@media (max-width: 600px) {
+@media (max-width: 500px) {
   .main-nav ul {
     display: none;
     flex-direction: column;
     background-color: var(--primary-color);
     position: absolute;
     top: 70px;
-    right: 10px;
+    left: 10px; /* menu drops from left instead of right */
     width: 200px;
     border-radius: 0 0 5px 5px;
     padding: 1rem 0;
+    text-align: center; /* center links */
   }
 
   .main-nav ul.show {
     display: flex;
   }
 
-  .hamburger {
+  /* Hamburger visible on mobile */
+.main-nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: var(--primary-color); /* keep your theme color */
+    position: absolute;
+    top: 70px;
+    right: 10px;              /* make it appear from the right */
+    width: 200px;
+    border-radius: 0 0 5px 5px;
+    padding: 1rem 0;
+    text-align: center;       /* center the links */
+  }
+
+  .main-nav ul.show {
     display: flex;
   }
 
+  .main-nav a {
+    color: white;             /* ensure links are white */
+    text-decoration: none;
+    padding: 10px 0;
+    display: block;
+  }
+
+  .hamburger {
+    display: flex;            /* show it */
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;  /* bars aligned neatly */
+    position: absolute;
+    top: 20px;
+    right: 20px;              /* button on the right */
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+
+  .hamburger span {
+    background: white;
+    height: 3px;
+    width: 100%;
+    border-radius: 2px;
+    margin-bottom: 4px;
+    transition: 0.3s;
+  }
+  
   .options-grid {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
+    display: flex;              /* stack items vertically */
+    flex-direction: column;
+    align-items: center;        /* center horizontally */
     gap: 15px;
   }
 
   figure img {
     width: 300px;
     height: 300px;
+  }
+
+  figcaption {
+    text-align: center;         /* center captions */
   }
 }
