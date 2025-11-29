@@ -12,28 +12,6 @@
     text-align: center; /* center links */
   }
 
-  .main-nav ul.show {
-    display: flex;
-  }
-
-  /* Hamburger visible on mobile */
-.main-nav ul {
-    display: none;
-    flex-direction: column;
-    background-color: var(--primary-color); /* keep your theme color */
-    position: absolute;
-    top: 70px;
-    right: 10px;              /* make it appear from the right */
-    width: 200px;
-    border-radius: 0 0 5px 5px;
-    padding: 1rem 0;
-    text-align: center;       /* center the links */
-  }
-
-  .main-nav ul.show {
-    display: flex;
-  }
-
   .main-nav a {
     color: white;             /* ensure links are white */
     text-decoration: none;
@@ -41,19 +19,25 @@
     display: block;
   }
 
-  .hamburger {
-    display: flex;            /* show it */
+  .main-nav ul.show {
+    display: flex;
+  }
+
+  /* Hamburger visible on mobile */
+.hamburger {
+    display: flex;              /* show it */
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;  /* bars aligned neatly */
-    position: absolute;
-    top: 20px;
-    right: 20px;              /* button on the right */
+    align-items: flex-start;    /* align bars inside to the left */
+    position: absolute;         /* fix position */
+    top: 20px;                  /* distance from top */
+    right: 20px;                /* move to the right side */
     width: 25px;
     height: 20px;
     cursor: pointer;
-    z-index: 1000;
-  }
+    z-index: 1000;              /* keep above menu */
+}
+
 
   .hamburger span {
     background: white;
@@ -80,3 +64,10 @@
     text-align: center;         /* center captions */
   }
 }
+
+
+
+
+
+
+  
