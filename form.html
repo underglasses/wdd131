@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review</title>
+
+    <link rel="stylesheet" href="styles/forms.css">
+    <link rel="stylesheet" href="styles/forms-large.css" media="screen and (min-width: 768px)">
+    <script src="scripts/form.js"></script>
+</head>
+
+<body>
+
+<header class="header">
+    <h1>Product Review Form</h1>
+</header>
+
+<div class="form-container">
+
+    <form id="reviewForm" method="get" action="review.html">
+
+        <!-- PRODUCT SELECT -->
+        <label for="product">Product Name</label>
+        <select id="product" name="product" required>
+            <option value="" disabled selected>Select a Product ...</option>
+        </select>
+
+        <!-- RATING -->
+        <label for="rating">Overall Rating</label>
+        <div class="rating-group">
+            <label><input type="radio" name="rating" id="rate1" value="1" required> ☆</label>
+            <label><input type="radio" name="rating" id="rate2" value="2"> ☆☆</label>
+            <label><input type="radio" name="rating" id="rate3" value="3"> ☆☆☆</label>
+            <label><input type="radio" name="rating" id="rate4" value="4"> ☆☆☆☆</label>
+            <label><input type="radio" name="rating" id="rate5" value="5"> ☆☆☆☆☆</label>
+        </div>
+
+        <!-- DATE -->
+        <label for="installDate">Date of Installation</label>
+        <input type="date" id="installDate" name="installDate" required>
+
+        <!-- FEATURES -->
+        <label>Useful Features (Check all that apply)</label>
+        <div class="checkbox-group">
+            <label><input type="checkbox" id="feat1" name="features" value="Durability"> Durability</label>
+            <label><input type="checkbox" id="feat2" name="features" value="Ease of Use"> Ease of Use</label>
+            <label><input type="checkbox" id="feat3" name="features" value="Performance"> Performance</label>
+            <label><input type="checkbox" id="feat4" name="features" value="Design"> Design</label>
+        </div>
+
+        <!-- WRITTEN REVIEW -->
+        <label for="reviewText">Written Review (Optional)</label>
+        <textarea id="reviewText" name="reviewText"></textarea>
+
+        <!-- USER NAME -->
+        <label for="username">Your Name (Optional)</label>
+        <input type="text" id="username" name="username">
+
+        <!-- SUBMIT -->
+        <input type="submit" value="Submit Review" class="submit-btn">
+    </form>
+</div>
+
+<footer class="footer">
+        <p>©<span id="year"></span> 🐟 Marcos Chinga 🐟 Ecuador</p>
+        <p class="javascript">Last Modified: <span id="date"></span></p>
+     </footer>
+
+
+</body>
+</html>
