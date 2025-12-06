@@ -27,29 +27,58 @@
             <option value="" disabled selected>Select a Product ...</option>
         </select>
 
-        <!-- RATING -->
-        <label>Overall Rating</label>
-        <div class="rating-group">
-            <label><input type="radio" name="rating" id="rate1" value="1" required> ☆</label>
-            <label><input type="radio" name="rating" id="rate2" value="2"> ☆☆</label>
-            <label><input type="radio" name="rating" id="rate3" value="3"> ☆☆☆</label>
-            <label><input type="radio" name="rating" id="rate4" value="4"> ☆☆☆☆</label>
-            <label><input type="radio" name="rating" id="rate5" value="5"> ☆☆☆☆☆</label>
-        </div>
-
-
         <!-- DATE -->
         <label for="installDate">Date of Installation</label>
         <input type="date" id="installDate" name="installDate" required>
 
+        <!-- RATING -->
+        <label>Overall Rating</label>
+        <div class="rating-group">
+
+            <label for="rate1">
+                <input type="radio" name="rating" id="rate1" value="1" required> ☆
+            </label>
+
+            <label for="rate2">
+                <input type="radio" name="rating" id="rate2" value="2" required> ☆☆
+            </label>
+
+            <label for="rate3">
+                <input type="radio" name="rating" id="rate3" value="3" required> ☆☆☆
+            </label>
+
+            <label for="rate4">
+                <input type="radio" name="rating" id="rate4" value="4" required> ☆☆☆☆
+            </label>
+
+            <label for="rate5">
+                <input type="radio" name="rating" id="rate5" value="5" required> ☆☆☆☆☆
+            </label>
+
+        </div>
+
         <!-- FEATURES -->
         <label>Useful Features (Check all that apply)</label>
         <div class="checkbox-group">
-            <label><input type="checkbox" id="feat1" name="features" value="Durability"> Durability</label>
-            <label><input type="checkbox" id="feat2" name="features" value="Ease of Use"> Ease of Use</label>
-            <label><input type="checkbox" id="feat3" name="features" value="Performance"> Performance</label>
-            <label><input type="checkbox" id="feat4" name="features" value="Design"> Design</label>
+
+            <label for="feat1">
+                <input type="checkbox" id="feat1" name="features" value="Durability"> Durability
+            </label>
+
+            <label for="feat2">
+                <input type="checkbox" id="feat2" name="features" value="Ease of Use"> Ease of Use
+            </label>
+
+            <label for="feat3">
+                <input type="checkbox" id="feat3" name="features" value="Performance"> Performance
+            </label>
+
+            <label for="feat4">
+                <input type="checkbox" id="feat4" name="features" value="Design"> Design
+            </label>
+
         </div>
+
 
         <!-- WRITTEN REVIEW -->
         <label for="reviewText">Written Review (Optional)</label>
