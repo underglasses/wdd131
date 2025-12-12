@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | City Explorer Guayaquil</title>
+  <meta name="description" content="Send feedback or recommend a spot to add to City Explorer.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/siteplan.css">
+  <script src="/scripts/siteplan.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="brand">
+      <a href="siteplan-index.html" class="logo">🌆 City Explorer</a>
+    </div>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="site-nav" aria-label="Primary">
+      <ul>
+        <li><a href="siteplan-index.html">Home</a></li>
+        <li><a href="siteplan-explore.html">Explore</a></li>
+        <li><a href="siteplan-contact.html" aria-current="page">Contact</a></li>
+        <li class="theme"><button id="themeToggle" aria-pressed="false">Toggle theme</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <header class="page-header">
+      <h1>Contact us</h1>
+      <p>Send feedback or recommend a new place.</p>
+    </header>
+
+    <form id="contactForm" novalidate>
+      <fieldset>
+        <legend>Your details</legend>
+        <div class="form-field">
+          <label for="name">Name</label>
+          <input id="name" name="name" required autocomplete="name">
+        </div>
+        <div class="form-field">
+          <label for="email">Email</label>
+          <input id="contactEmail" name="email" type="email" required autocomplete="email">
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Recommendation</legend>
+        <div class="form-field">
+          <label for="placeName">Place name</label>
+          <input id="placeName" name="placeName" required>
+        </div>
+        <div class="form-field">
+          <label for="category">Category</label>
+          <select id="contactCategory" name="category" required>
+            <option value="">Select…</option>
+            <option value="food">Food</option>
+            <option value="park">Park</option>
+            <option value="culture">Culture</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="message">Why is it great?</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+      </fieldset>
+
+      <button type="submit">Send</button>
+      <p id="contactMessage" role="status" aria-live="polite"></p>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> City Explorer Guayaquil.</p>
+    <p><a href="siteplan-sp.html">Site plan</a> · <a href="siteplan-references.html">References</a></p>
+  </footer>
+</body>
+</html>

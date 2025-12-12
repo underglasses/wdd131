@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>City Explorer Guayaquil</title>
+  <meta name="description" content="Discover curated spots around Guayaquil—food, parks, and culture—optimized for mobile and desktop.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Distinct Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/siteplan.css">
+  <script src="/scripts/siteplan.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="brand">
+      <a href="siteplan-index.html" class="logo" aria-label="City Explorer home">🌆 City Explorer</a>
+    </div>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="site-nav" aria-label="Primary">
+      <ul>
+        <li><a href="siteplan-index.html" aria-current="page">Home</a></li>
+        <li><a href="siteplan-explore.html">Explore</a></li>
+        <li><a href="siteplan-contact.html">Contact</a></li>
+        <li class="theme"><button id="themeToggle" aria-pressed="false">Toggle theme</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <picture>
+        <source srcset="images/hero-1600.jpg" media="(min-width: 800px)">
+        <img src="images/hero-800.jpg" alt="Guayaquil skyline at sunset" loading="lazy">
+      </picture>
+      <div class="hero-text">
+        <h1>Find your next favorite place</h1>
+        <p>Curated picks across food, parks, and culture in Guayaquil. Mobile-first, fast, and accessible.</p>
+        <a class="cta" href="siteplan-explore.html">Start exploring</a>
+      </div>
+    </section>
+
+    <section class="features" aria-labelledby="features-title">
+      <h2 id="features-title">What makes it useful</h2>
+      <ul class="feature-list">
+        <li>
+          <h3>Local insights</h3>
+          <p>Handpicked recommendations—no fluff, just great spots.</p>
+        </li>
+        <li>
+          <h3>Save favorites</h3>
+          <p>Mark and revisit places with one click using localStorage.</p>
+        </li>
+        <li>
+          <h3>Responsive</h3>
+          <p>Designed for mobile and desktop with thoughtful layout.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="newsletter" aria-labelledby="newsletter-title">
+      <h2 id="newsletter-title">Stay in the loop</h2>
+      <form id="newsletterForm" novalidate>
+        <div class="form-field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="emailHelp">
+          <small id="emailHelp">We'll send occasional updates. No spam.</small>
+        </div>
+        <button type="submit">Subscribe</button>
+        <p id="newsletterMessage" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> City Explorer Guayaquil. Built for W06.</p>
+    <p><a href="siteplan-sp.html">Site plan</a> · <a href="siteplan-references.html">References</a></p>
+  </footer>
+</body>
+</html>

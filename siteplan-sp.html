@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Site plan | City Explorer Guayaquil</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial; line-height: 1.6; max-width: 70ch; margin: 2rem auto; padding: 0 1rem; }
+    h1, h2 { margin-top: 1.5rem; }
+    code { background: #eee; padding: 0.1rem 0.3rem; }
+  </style>
+</head>
+<body>
+  <h1>Site plan: City Explorer Guayaquil</h1>
+
+  <h2>Purpose</h2>
+  <p>Provide curated recommendations for food, parks, and culture in Guayaquil, with mobile-first performance and accessibility.</p>
+
+  <h2>Audience</h2>
+  <p>Locals and travelers seeking quick, reliable picks with concise info and maps/links.</p>
+
+  <h2>Content and pages</h2>
+  <ul>
+    <li><strong>Home:</strong> Value proposition, hero, newsletter form.</li>
+    <li><strong>Explore:</strong> Dynamic cards powered by JavaScript, filters, favorites.</li>
+    <li><strong>Contact:</strong> Accessible form to submit recommendations.</li>
+    <li><strong>References:</strong> Source citations (unstyled).</li>
+  </ul>
+
+  <h2>Design and branding</h2>
+  <ul>
+    <li><strong>Typography:</strong> Manrope from Google Fonts for modern readability.</li>
+    <li><strong>Color:</strong> Neutral light/dark themes with sufficient contrast checked via DevTools.</li>
+    <li><strong>Layout:</strong> Mobile-first single-column, progressive enhancement to grid for desktop. Respect PARC principles.</li>
+  </ul>
+
+  <h2>Accessibility</h2>
+  <ul>
+    <li><strong>Semantics:</strong> Proper landmarks (<code>header</code>, <code>nav</code>, <code>main</code>, <code>footer</code>).</li>
+    <li><strong>Focusable controls:</strong> Visible focus, ARIA where appropriate, labels linked to inputs, live regions for feedback.</li>
+    <li><strong>Contrast:</strong> Verified via CSS Overview and Lighthouse.</li>
+  </ul>
+
+  <h2>Performance</h2>
+  <ul>
+    <li><strong>Optimized images:</strong> Appropriately sized and compressed with <code>loading="lazy"</code> and <code>&lt;picture&gt;</code> for hero.</li>
+    <li><strong>Minimal JS/CSS:</strong> Deferred JS, single CSS file.</li>
+  </ul>
+
+  <h2>JavaScript requirements coverage</h2>
+  <ul>
+    <li><strong>Functions:</strong> Multiple helper and event handler functions.</li>
+    <li><strong>DOM interaction:</strong> Select, modify, add event listeners.</li>
+    <li><strong>Conditionals:</strong> Theme toggle, filters, form validation branches.</li>
+    <li><strong>Objects/arrays/methods:</strong> Places array of objects; uses <code>map</code>, <code>filter</code>, <code>sort</code>.</li>
+    <li><strong>Template literals:</strong> All card and message rendering.</li>
+    <li><strong>localStorage:</strong> Persist theme, favorites, newsletter/contact confirmations.</li>
+  </ul>
+</body>
+</html>

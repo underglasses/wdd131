@@ -1,0 +1,121 @@
+/* styles.css */
+
+/* CSS reset (minimal) */
+* { box-sizing: border-box; }
+html:focus-within { scroll-behavior: smooth; }
+body { margin: 0; font-family: "Manrope", system-ui, -apple-system, Segoe UI, Roboto, Arial; line-height: 1.6; background: var(--bg); color: var(--text); }
+
+:root {
+  --bg: #ffffff;
+  --text: #1f2937;
+  --muted: #4b5563;
+  --brand: #2563eb;
+  --brand-ink: #0b3ea5;
+  --surface: #f3f4f6;
+  --border: #e5e7eb;
+}
+
+body.dark {
+  --bg: #0b1220;
+  --text: #e5e7eb;
+  --muted: #c7c9d1;
+  --brand: #60a5fa;
+  --brand-ink: #1d4ed8;
+  --surface: #111827;
+  --border: #1f2937;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+}
+.skip-link:focus {
+  left: 1rem; top: 1rem; background: var(--surface); color: var(--text); padding: 0.5rem 0.75rem; border-radius: 0.5rem; z-index: 1000;
+}
+
+.site-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); background: var(--bg);
+}
+.logo { font-weight: 800; color: var(--text); text-decoration: none; }
+.nav-toggle {
+  background: var(--surface); color: var(--text); border: 1px solid var(--border);
+  padding: 0.5rem 0.75rem; border-radius: 0.5rem;
+}
+.site-nav { display: none; }
+.site-nav[data-open="true"] { display: block; }
+.site-nav ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.5rem; grid-template-columns: 1fr 1fr 1fr auto; }
+.site-nav a { text-decoration: none; color: var(--text); padding: 0.5rem; border-radius: 0.4rem; }
+.site-nav a[aria-current="page"] { background: var(--surface); }
+
+.theme button {
+  background: var(--brand); color: white; border: none; padding: 0.5rem 0.75rem; border-radius: 0.5rem;
+}
+.theme button:hover { background: var(--brand-ink); }
+
+.hero {
+  display: grid; gap: 1rem; padding: 1rem;
+}
+.hero img { width: 100%; height: auto; border-radius: 0.75rem; }
+.hero-text h1 { margin: 0.5rem 0; font-size: 1.75rem; }
+.cta { display: inline-block; margin-top: 0.5rem; background: var(--brand); color: #fff; text-decoration: none; padding: 0.5rem 0.75rem; border-radius: 0.5rem; }
+.cta:hover { background: var(--brand-ink); }
+
+.features { padding: 1rem; }
+.feature-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 1rem; }
+.feature-list li { background: var(--surface); padding: 1rem; border: 1px solid var(--border); border-radius: 0.75rem; }
+
+.newsletter, .favorites, .controls, .cards { padding: 1rem; }
+.form-field { margin-bottom: 0.75rem; }
+label { display: block; margin-bottom: 0.25rem; }
+input, select, textarea {
+  width: 100%; padding: 0.5rem; border: 1px solid var(--border); border-radius: 0.5rem; background: var(--bg); color: var(--text);
+}
+button[type="submit"], button[type="button"] {
+  background: var(--brand); color: #fff; border: none; padding: 0.6rem 0.9rem; border-radius: 0.5rem; cursor: pointer;
+}
+button[type="submit"]:hover { background: var(--brand-ink); }
+small { color: var(--muted); }
+
+.page-header { padding: 1rem; }
+
+.grid {
+  display: grid; gap: 1rem;
+  grid-template-columns: 1fr;
+}
+.card {
+  background: var(--surface); border: 1px solid var(--border); border-radius: 0.75rem; overflow: hidden;
+  display: grid; grid-template-columns: 1fr; }
+.card img { width: 100%; height: auto; display: block; }
+.card-body { padding: 0.75rem; }
+.card-title { margin: 0 0 0.25rem; font-size: 1.2rem; }
+.card-meta { color: var(--muted); margin-bottom: 0.5rem; }
+.card-actions { display: flex; gap: 0.5rem; }
+
+.empty { color: var(--muted); padding: 1rem; }
+
+.favorites-list { list-style: none; padding: 1rem; margin: 0; display: grid; gap: 0.5rem; }
+.favorites-list li { background: var(--surface); border: 1px solid var(--border); padding: 0.5rem; border-radius: 0.5rem; }
+
+.site-footer {
+  border-top: 1px solid var(--border); padding: 1rem; color: var(--muted);
+}
+
+/* Focus styles for accessibility */
+:focus { outline: 2px solid var(--brand); outline-offset: 2px; }
+
+/* Desktop enhancements */
+@media (min-width: 768px) {
+  .hero { grid-template-columns: 1.2fr 1fr; align-items: center; }
+  .site-header { padding: 1rem 2rem; }
+  .site-nav { display: block !important; }
+  .nav-toggle { display: none; }
+  .feature-list { grid-template-columns: repeat(3, 1fr); }
+  .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+/* Larger screens */
+@media (min-width: 1200px) {
+  .hero-text h1 { font-size: 2rem; }
+  .grid { grid-template-columns: repeat(4, 1fr); }
+}
